@@ -1,9 +1,11 @@
 // MODULES =================================
-@use 'modules/body';
-@use 'modules/contact';
-@use 'modules/container';
-@use 'modules/experience';
-@use 'modules/profile';
+@use '../SASS/modules/body';
+@use '../SASS/modules/contact';
+@use '../SASS/modules/container';
+@use '../SASS/modules/experience';
+@use '../SASS/modules/personal';
+@use '../SASS/modules/profile';
+@use '../SASS/modules/skill';
 
 // SUB-MODULES ============================
-@use  'modules/sub-modules/base';
+@use  '../SASS/modules/sub-modules/base';
