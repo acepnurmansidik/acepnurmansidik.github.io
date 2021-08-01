@@ -1,0 +1,40 @@
+@mixin grid-base-container($display, $gtColumns, $gtRows, $gap, $pItems: stretch, $pContent: stretch) {
+    display: $display;
+    grid-template-columns: $gtColumns;
+    grid-template-rows: $gtRows;
+    place-items: $pItems;
+    place-content: $pContent;
+    gap: $gap;
+}
+
+@mixin grid-columns-rows($columns, $rows) {
+    grid-column: $columns;
+    grid-row: $rows;
+}
+
+@mixin flex-base-container($display, $direction, $bSizing, $mBottom) {
+    display: $display;
+    flex-direction: $direction;
+    box-sizing: $bSizing;
+    margin-bottom: $mBottom;
+}
+
+@mixin flex-item($flex, $order) {
+    flex: $flex;
+    order: $order
+}
+
+@mixin scrollbar($width, $BGthumb, $bRadius){
+    ::-webkit-scrollbar{
+        width: $width;
+    }
+
+    ::-webkit-scrollbar-thumb{
+        background: $BGthumb;
+        border-radius: $bRadius;
+    }
+    
+    ::-webkit-scrollbar-track{
+        background: transparent;
+    }
+}

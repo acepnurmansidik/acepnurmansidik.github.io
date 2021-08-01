@@ -1,0 +1,22 @@
+@use 'sub-modules/mixin' as mixin;
+
+.profile {
+    text-align: center;
+
+    .title-dsc {
+        border-top: none;
+    }
+
+    .description {
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img1 {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        background-color: #3975bb;
+    }
+}

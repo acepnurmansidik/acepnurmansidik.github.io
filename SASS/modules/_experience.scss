@@ -1,0 +1,24 @@
+@use 'sub-modules/mixin' as mixin;
+
+.experience {
+    .info-description {
+        @include mixin.flex-item(3.5, 1);
+    }
+
+    .info-year {
+        @include mixin.flex-item(1, 2);
+
+    }
+
+    .info {
+        text-align: center;
+    }
+
+    .desc {
+        margin-left: .3em;
+    }
+
+    .desc:nth-child(1){
+        font-weight: bold;
+    }
+}
