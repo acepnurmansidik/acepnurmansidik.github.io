@@ -1,10 +1,9 @@
 @use 'sub-modules/mixin' as mixin;
 
 .profile {
-    text-align: center;
-
     .title-dsc {
         border-top: none;
+        justify-content: center;
     }
 
     .description {

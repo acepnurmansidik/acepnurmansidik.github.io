@@ -10,12 +10,10 @@
   }
 }
 body {
-  padding: 0;
-  margin: 0;
+  padding: 6vh 0 6vh 0;
   font-family: Arial, Helvetica, sans-serif;
   background-image: linear-gradient(145deg, #ff73da 0, #ff69e1 12.5%, #f161e7 25%, #d959ed 37.5%, #bc53f2 50%, #984ff7 62.5%, #6a4ffc 75%, #0051ff 87.5%, #0053ff 100%);
   background-size: 400% 400%;
-  background-repeat: no-repeat;
   animation: changecolors 20s ease-in-out infinite;
 }
 body ::-webkit-scrollbar {
@@ -53,10 +51,9 @@ body ::-webkit-scrollbar-track {
   grid-template-rows: repeat(auto-fit, 1.2fr);
   place-items: stretch;
   place-content: stretch;
-  gap: 1.2em;
+  gap: 0.5em;
   box-sizing: border-box;
-  margin: calc(5vh + .5%) 0 calc(5vh + .5%) 0;
-  padding: 20px 1.2em 20px 1.2em;
+  padding: 0 1.2em 0 1.2em;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3)), linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
   box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.5), 0px 0px 30px rgba(255, 255, 255, 0.6), 0px 0px 20px rgba(255, 255, 255, 0.7);
 }
@@ -64,10 +61,23 @@ body ::-webkit-scrollbar-track {
   text-align: justify;
 }
 
+.personal, .education, .skill, .contact,
+.experience, .profile {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3fr;
+  place-items: stretch;
+  place-content: stretch;
+  gap: 1em;
+  box-sizing: content-box;
+  align-self: center;
+}
 .personal .title-dsc, .education .title-dsc, .skill .title-dsc, .contact .title-dsc,
 .experience .title-dsc, .profile .title-dsc {
   border-bottom: 2px rgba(0, 0, 0, 0.7) solid;
   border-top: 2px rgba(0, 0, 0, 0.7) solid;
+  display: flex;
+  align-items: center;
 }
 .personal .description, .education .description, .skill .description, .contact .description,
 .experience .description, .profile .description {
@@ -85,21 +95,10 @@ body ::-webkit-scrollbar-track {
 }
 
 .personal .description, .education .description, .skill .description, .contact .description,
-.experience .description {
+.experience .description, .profile .description {
   width: 100%;
-  height: 210px;
+  height: 13.125em;
   overflow: auto;
-}
-
-.personal, .education, .skill,
-.experience, .contact, .profile {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 3fr;
-  place-items: stretch;
-  place-content: stretch;
-  gap: 0.5em;
-  box-sizing: content-box;
 }
 
 .education .info, .skill .info, .personal .info {
@@ -132,11 +131,13 @@ body ::-webkit-scrollbar-track {
   font-weight: bold;
 }
 
-.profile {
-  text-align: center;
+.personal .sub-description {
+  flex-direction: column;
 }
+
 .profile .title-dsc {
   border-top: none;
+  justify-content: center;
 }
 .profile .description {
   box-sizing: border-box;
@@ -150,8 +151,26 @@ body ::-webkit-scrollbar-track {
   background-color: #3975bb;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 ::-webkit-scrollbar {
   width: 0;
+}
+
+@media (min-width: 1042px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(400px, 1fr));
+    grid-template-rows: repeat(auto-fit, 1.2fr);
+    place-items: stretch;
+    place-content: stretch;
+    gap: 1.2em;
+    height: 88vh;
+    padding: 2vh 1.2em 2vh 1.2em;
+  }
 }
 
 /*# sourceMappingURL=CVindex.css.map */
