@@ -1,0 +1,157 @@
+@keyframes changecolors {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(145deg, #ff73da 0, #ff69e1 12.5%, #f161e7 25%, #d959ed 37.5%, #bc53f2 50%, #984ff7 62.5%, #6a4ffc 75%, #0051ff 87.5%, #0053ff 100%);
+  background-size: 400% 400%;
+  background-repeat: no-repeat;
+  animation: changecolors 20s ease-in-out infinite;
+}
+body ::-webkit-scrollbar {
+  width: 0.4em;
+}
+body ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+}
+body ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.contact .info {
+  flex: 0.5;
+  order: 1;
+  text-align: center;
+}
+.contact .desc {
+  flex: 3;
+  order: 2;
+}
+.contact a {
+  text-decoration: none;
+  color: black;
+}
+.contact img {
+  height: 20px;
+  width: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-rows: repeat(auto-fit, 1.2fr);
+  place-items: stretch;
+  place-content: stretch;
+  gap: 1.2em;
+  box-sizing: border-box;
+  margin: calc(5vh + .5%) 0 calc(5vh + .5%) 0;
+  padding: 20px 1.2em 20px 1.2em;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3)), linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
+  box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.5), 0px 0px 30px rgba(255, 255, 255, 0.6), 0px 0px 20px rgba(255, 255, 255, 0.7);
+}
+.container .text {
+  text-align: justify;
+}
+
+.personal .title-dsc, .education .title-dsc, .skill .title-dsc, .contact .title-dsc,
+.experience .title-dsc, .profile .title-dsc {
+  border-bottom: 2px rgba(0, 0, 0, 0.7) solid;
+  border-top: 2px rgba(0, 0, 0, 0.7) solid;
+}
+.personal .description, .education .description, .skill .description, .contact .description,
+.experience .description, .profile .description {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-bottom: 0;
+}
+.personal .sub-description, .education .sub-description, .skill .sub-description, .contact .sub-description,
+.experience .sub-description, .profile .sub-description {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  margin-bottom: 0.6em;
+}
+
+.personal .description, .education .description, .skill .description, .contact .description,
+.experience .description {
+  width: 100%;
+  height: 210px;
+  overflow: auto;
+}
+
+.personal, .education, .skill,
+.experience, .contact, .profile {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3fr;
+  place-items: stretch;
+  place-content: stretch;
+  gap: 0.5em;
+  box-sizing: content-box;
+}
+
+.education .info, .skill .info, .personal .info {
+  flex: 1;
+  order: 2;
+  text-align: center;
+}
+.education .desc, .skill .desc, .personal .desc {
+  flex: 3;
+  order: 1;
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+}
+
+.experience .info-description {
+  flex: 3.5;
+  order: 1;
+}
+.experience .info-year {
+  flex: 1;
+  order: 2;
+}
+.experience .info {
+  text-align: center;
+}
+.experience .desc {
+  margin-left: 0.3em;
+}
+.experience .desc:nth-child(1) {
+  font-weight: bold;
+}
+
+.profile {
+  text-align: center;
+}
+.profile .title-dsc {
+  border-top: none;
+}
+.profile .description {
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+.profile .img1 {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: #3975bb;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
