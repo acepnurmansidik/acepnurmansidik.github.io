@@ -40,20 +40,14 @@
 
     .description {
         @include mixin.flex-base-container(flex, column, border-box, 0);
+        width: 100%;
+        height: 13.125em;
+        overflow: auto;
     }
 
     .sub-description {
         @include mixin.flex-base-container(flex, row, border-box, .6em);
 
-    }
-}
-
-.personal, .education, .skill, .contact,
-.experience, .profile {
-    .description { 
-        width: 100%;
-        height: 13.125em;
-        overflow: auto;
     }
 }
 

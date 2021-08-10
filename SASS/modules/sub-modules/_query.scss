@@ -1,6 +1,6 @@
 @use '../sub-modules/mixin' as mixin;
 
-@media (min-width: 1042px){
+@media (min-width: 1042px) and (min-height: 714px){
     .container{
         @include mixin.grid-base-container(grid, repeat(3, minmax(400px, 1fr)), repeat(auto-fit, 1.2fr), 1.2em);
         height: 88vh;
